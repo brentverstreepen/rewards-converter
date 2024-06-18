@@ -13,7 +13,7 @@ public class RewardValueTests {
 
     @Test
     void create_with_miles_value() {
-        int milesValue = 10_000;
+        int milesValue = 10000;
 
         RewardValue rewardValue = new RewardValue(milesValue);
         assertEquals(milesValue, rewardValue.getMilesValue());
@@ -21,7 +21,7 @@ public class RewardValueTests {
 
     @Test
     void convert_from_cash_to_miles() {
-        double cashValue = 10_000;
+        double cashValue = 10000;
         int expectedMilesValue = (int) (cashValue / RewardValue.conversionRate);
 
         RewardValue rewardValue = new RewardValue(cashValue);
@@ -30,7 +30,7 @@ public class RewardValueTests {
 
     @Test
     void convert_from_miles_to_cash() {
-        int milesValue = 10_000;
+        int milesValue = 10000;
         double expectedCashValue = milesValue * RewardValue.conversionRate;
 
         RewardValue rewardValue = new RewardValue(milesValue);
